@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Preferences Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Travel Preferences Survey</h1>
+    <p id="description">We'd love to know more about your travel preferences. Please fill out this survey.</p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label id="email-label" for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label id="number-label" for="number">Travel Frequency (per year):</label>
+        <input type="number" id="number" name="number" placeholder="Enter number of trips" min="0" max="50" required>
+
+        <label for="dropdown">Favorite Destination:</label>
+        <select id="dropdown" name="destination" required>
+            <option value="beach">Beach</option>
+            <option value="mountains">Mountains</option>
+            <option value="city">City</option>
+            <option value="countryside">Countryside</option>
+        </select>
+
+        <p>Preferred Mode of Transportation:</p>
+        <label><input type="radio" name="transport" value="car" required> Car</label>
+        <label><input type="radio" name="transport" value="plane"> Plane</label>
+        <label><input type="radio" name="transport" value="train"> Train</label>
+        <label><input type="radio" name="transport" value="ship"> Ship</label>
+
+        <p>What activities do you enjoy while traveling? (Select all that apply)</p>
+        <label><input type="checkbox" name="activity" value="sightseeing"> Sightseeing</label>
+        <label><input type="checkbox" name="activity" value="hiking"> Hiking</label>
+        <label><input type="checkbox" name="activity" value="shopping"> Shopping</label>
+        <label><input type="checkbox" name="activity" value="dining"> Dining</label>
+        <label><input type="checkbox" name="activity" value="relaxing"> Relaxing</label>
+
+        <label for="comments">Any other travel preferences or comments?</label>
+        <textarea id="comments" name="comments" placeholder="Share your thoughts"></textarea>
+
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</body>
+</html>
