@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Django Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Installation">Installation</a>
+        <a class="nav-link" href="#Creating_a_Project">Creating a Project</a>
+        <a class="nav-link" href="#Creating_Apps">Creating Apps</a>
+        <a class="nav-link" href="#URL_Routing">URL Routing</a>
+    </nav>
+
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.</p>
+            <p>It was developed to help developers take applications from concept to completion as quickly as possible.</p>
+            <p>Django emphasizes reusability and "don't repeat yourself" (DRY) principles.</p>
+            <code>from django.conf import settings</code>
+            <ul>
+                <li>High-level Python web framework</li>
+                <li>Encourages rapid development</li>
+                <li>Clean, pragmatic design</li>
+            </ul>
+        </section>
+
+        <section id="Installation" class="main-section">
+            <header>Installation</header>
+            <p>To install Django, use pip, the Python package installer.</p>
+            <code>pip install django</code>
+            <p>You can verify the installation by running:</p>
+            <code>django-admin --version</code>
+            <ul>
+                <li>Install using pip</li>
+                <li>Verify installation</li>
+            </ul>
+        </section>
+
+        <section id="Creating_a_Project" class="main-section">
+            <header>Creating a Project</header>
+            <p>To create a new Django project, run the following command:</p>
+            <code>django-admin startproject myproject</code>
+            <p>This will create a new directory called 'myproject' with the necessary files and directories for a Django project.</p>
+            <ul>
+                <li>Create project directory</li>
+                <li>Generate initial setup files</li>
+            </ul>
+        </section>
+
+        <section id="Creating_Apps" class="main-section">
+            <header>Creating Apps</header>
+            <p>Inside a Django project, you can create multiple apps. To create an app, run:</p>
+            <code>python manage.py startapp myapp</code>
+            <p>This will create a directory called 'myapp' with the necessary files for the app.</p>
+            <ul>
+                <li>Create app directory</li>
+                <li>Generate initial setup files</li>
+            </ul>
+        </section>
+
+        <section id="URL_Routing" class="main-section">
+            <header>URL Routing</header>
+            <p>Django uses a URL dispatcher to match the requested URL to a view function. Define URL patterns in the urls.py file.</p>
+            <code>
+                from django.urls import path<br>
+                from . import views<br>
+                urlpatterns = [<br>
+                &nbsp;&nbsp;&nbsp;path('', views.index, name='index'),<br>
+                ]<br>
+            </code>
+            <p>This example maps the root URL to the 'index' view function.</p>
+            <ul>
+                <li>Define URL patterns</li>
+                <li>Map URLs to views</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
